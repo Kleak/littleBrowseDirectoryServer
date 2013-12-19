@@ -1,9 +1,9 @@
 import 'dart:io' as IO;
 
-String address = "127.0.0.1";
+String address = "192.168.1.27";
 int port = 8888;
 
-void main() {
+void main(List<String> args) {
   IO.HttpServer.bind(address, port).then((IO.HttpServer hs) {
     hs.listen((IO.HttpRequest req) {
       String path = "./web${req.uri.path}";
